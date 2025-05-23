@@ -1,13 +1,61 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap');
+
+:root{
+  --font-base: 'Railway', sans-serif;
+  --accent-color: #436270;
+  /* --dark-void-color: #151419; */
+  /* --glucon-grey: #1b1a1f; */
+  /* --glucon-color: #262626; */
+  /* --dusty-grey: #878787; */
+  --dark-color: #464646;
+  --light-grey: #f4f4f4;
+  --white-color: #fbfbfb;
+  --transition: all 300ms ease-in-out;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+html{
+  font-size: 10px;
+}
+
+body{
+  font-size: 1.8rem;
+  line-height: 1.6;
+  font-family: var(--font-base);
+  color: var(--dark-color);
+}
+
+a{
+  color: unset;
+  text-decoration: none;
+}
+ul{
+  list-style-type: none;
+}
+img{
+  width: 100%;
+  display: block;
+}
+button{
+  cursor: pointer;
+  outline: 0;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 1.8rem;
+}
+input, textarea{
+  outline: 0;
+  border: none;
+  resize: none;
+}
+h1, h2, h3, h4{
+  line-height: 1.5;
+  letter-spacing: 1px;
 }

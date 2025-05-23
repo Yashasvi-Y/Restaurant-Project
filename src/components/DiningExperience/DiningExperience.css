@@ -1,0 +1,51 @@
+.dining-experience-content{
+    gap: 6rem;
+}
+.dining-experience-item{
+    background-color: rgb(249, 249, 249);
+    padding: 4rem 2rem;
+    max-width: 480px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 25px 20px -20px;
+    transition: var(--transition);
+}
+
+.dining-experience-item:hover{
+    box-shadow: rgba(0, 0, 0, 0.45) 0 25px 20px -20px;
+}
+
+.dining-experience-item-title{
+    font-size: 2.6rem;
+}
+.dining-experience-item-list{
+    max-width: 280px;
+    margin: 3.6rem auto;
+}
+.dining-experience-item-list li{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+}
+
+.dining-experience-item-price{
+    font-weight: 600;
+}
+
+/* .dining-experience-item:nth-child(2) .dining-experience-item-price span{
+    font-size: 4rem;
+} */
+
+.dining-experience-item-price span{
+    font-size: 2.8rem;
+}
+
+@media screen and (min-width : 768px){
+    .dining-experience-content{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width : 1200px){
+    .dining-experience-content{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

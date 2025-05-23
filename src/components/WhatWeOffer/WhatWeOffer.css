@@ -1,0 +1,21 @@
+.what-we-offer-item{
+    padding: 6rem 0;
+    gap: 6rem;
+}
+.what-we-offer-item img{
+    max-width: 520px;
+}
+.what-we-offer-item .text{
+    max-width: 680px;
+}
+
+@media screen and (min-width: 992px) {
+    .what-we-offer-item{
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        text-align: left;
+    }
+    .what-we-offer-item:nth-child(even) .what-we-offer-item-left{
+        order: 2;
+    }
+}
