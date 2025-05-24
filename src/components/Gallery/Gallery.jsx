@@ -12,7 +12,7 @@ const Gallery = () => {
                     {
                         data.gallery.map((gal, index)=>{
                             return(
-                                <div className="gallery-item text-center" key={index}>
+                                <div className="gallery-item text-center" key={index} data-aos="zoom-out" data-aos-duration = "1500">
                                     <img src={gal.img} alt="gallery images" className="mx-auto"/>
                                     <h4 className="text-upper">{gal.title}</h4>
                                 </div>

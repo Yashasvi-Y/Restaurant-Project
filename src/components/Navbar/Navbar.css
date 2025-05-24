@@ -1,6 +1,11 @@
 .navbar{
     background-color: var(--accent-color);
     padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 .brand-and-toggler{
     justify-content: space-between;

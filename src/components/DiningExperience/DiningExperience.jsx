@@ -12,7 +12,7 @@ const DiningExperience = () =>{
                     {
                         data.dining_experience.map((experience, index) => {
                             return(
-                                <div className="dining-experience-item text-center mx-auto" key={index}>
+                                <div className="dining-experience-item text-center mx-auto" key={index} data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                                     <h3 className="dining-experience-item-title">{experience.type}</h3>
                                     <ul className="dining-experience-item-list">
                                         {

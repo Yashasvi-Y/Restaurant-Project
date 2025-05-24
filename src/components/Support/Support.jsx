@@ -10,7 +10,7 @@ const Support = () => {
                     <h2 className="text-upper text-white text-center">Updates & Support</h2>
                 </div>
                 <div className="support-content grid py-6 text-center">
-                    <div className="support-content-left">
+                    <div className="support-content-left" data-aos = "fade-right" data-aos-duration = "2000">
                         <p className="text mx-auto">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis cum ad rem ipsum obcaecati facere nam similique dolor neque, placeat vitae perspiciatis adipisci quas deserunt tempora quam ipsam culpa aut?
                         </p>
@@ -19,7 +19,7 @@ const Support = () => {
                         </p>
                         <a href="#" className="btn btn-accent">Support Center</a>
                     </div>
-                    <div className="support-content-right">
+                    <div className="support-content-right" data-aos = "fade-left" data-aos-duration = "2000">
                         <img src={images.drink7} alt="" className="mx-auto"/>
                     </div>
                 </div>

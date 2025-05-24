@@ -10,14 +10,14 @@ const Header = () => {
             <Navbar/>
             <div className="container">
                 <div className="header-content grid text-center py-6 text-white">
-                    <div className="header-content-left">
+                    <div className="header-content-left" data-aos="fade-right">
                         <h1 className="text-upper header-title">Indriya</h1>
-                        <p className="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem repellat voluptatum corporis ab ipsa, itaque id quis non aspernatur aut possimus asperiores quaerat vero aliquid excepturi voluptas voluptatem necessitatibus nobis!</p>
+                        <p className="text">Welcome to Indriya, where every meal is a celebration of flavors and tradition. Embark on a culinary journey that excites your palate and soothes your soul. Join us for exceptional food, attentive service, and an ambiance that makes every visit truly special.</p>
                         <a href="#" className="btn btn-dark">
                             <span>view more</span> <FaRegPaperPlane />
                         </a>
                     </div>
-                    <div className="header-content-right">
+                    <div className="header-content-right" data-aos="fade-left">
                         <img src={images.header_image} alt="header image Restaurant" />
                     </div>
                 </div>

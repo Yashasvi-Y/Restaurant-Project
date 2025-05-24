@@ -45,7 +45,7 @@ const Footer = () => (
         </div>
       ))}
     </div>
-    <div className="footer-copyright">
+    <div className="footer-copyright" data-aos="fade-up" data-aos-duration = "2500">
       © 2025 INDRIYA, All Rights Reserved
     </div>
   </footer>

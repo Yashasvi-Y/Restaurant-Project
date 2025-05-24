@@ -8,6 +8,10 @@ import Gallery from './components/Gallery/Gallery';
 import Team from './components/Team/Team';
 import Support from './components/Support/Support';
 import Footer from './components/Footer/Footer';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
 
 function App() {
   return (

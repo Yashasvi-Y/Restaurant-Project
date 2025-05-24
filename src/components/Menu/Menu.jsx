@@ -12,7 +12,7 @@ const Menu =() => {
                     {
                         data.menu.map((menu, index) => {
                             return (
-                                <div className="menu-item text-center" key={index}>
+                                <div className="menu-item text-center" key={index} data-aos="fade-up" data-aos-duration="2500">
                                     <div className="menu-item-icon">
                                         <img src={menu.icon} alt="menu icon" className="mx-auto"/>
                                     </div>

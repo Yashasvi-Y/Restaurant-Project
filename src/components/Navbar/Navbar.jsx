@@ -1,5 +1,4 @@
 import { useState } from "react";
-import images from "../../constants/images";
 import"./Navbar.css"; 
 import {FaBars, FaTimes} from "react-icons/fa";
 
@@ -26,22 +25,22 @@ const Navbar = () => {
                             <a href="#header" className="nav-link">home</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#header" className="nav-link">what we offer</a>
+                            <a href="#what-we-offer" className="nav-link">what we offer</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#header" className="nav-link">menu</a>
+                            <a href="#menu" className="nav-link">menu</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#header" className="nav-link">dining Experiences</a>
+                            <a href="#dining-experience" className="nav-link">dining Experiences</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#header" className="nav-link">Gallery</a>
+                            <a href="#gallery" className="nav-link">Gallery</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#header" className="nav-link">team</a>
+                            <a href="#team" className="nav-link">team</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#header" className="nav-link">support</a>
+                            <a href="#support" className="nav-link">support</a>
                         </li>
 
                     </ul>
