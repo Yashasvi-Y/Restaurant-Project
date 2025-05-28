@@ -29,124 +29,247 @@ const what_we_offer=[
     },
 ];
 
-const menu = [
-    {
-        icon: `${images.food4}`,
-        title: "Starters & Small Plates",
-        text: [
-            "Roasted Beet & Goat Cheese Salad",
-            "Spiced Butternut Squash Soup",
-            "Calamari Fritti",
-            "Crispy Cauliflower Bites",
-            "Avocado Fruit Salad",
-            "Chicken Pot Stickers",
-            "Yuzu Tuna Tartare",
-            "Classic Bruschetta"
-        ]
-    },
-    {
-        icon: `${images.food1}`,
-        title: "Mains & Signature Dishes",
-        text: [
-            "Herb-Crusted Lamb Rack",
-            "Pan-Seared Sea Bass",
-            "Wild Mushroom Risotto",
-            "Spaghetti & Meatballs",
-            "Classic Cheeseburger",
-            "Chicken Parmesan",
-            "Moroccan-Spiced Chicken",
-            "Impossible™ Burger",
-            "Customizable Grain Bowls"
-        ]
-    },
-    {
-        icon: `${images.food5}`,
-        title: "All-Day Brunch & Comfort Food",
-        text: [
-            "Buttermilk Fried Chicken & Waffles",
-            "Truffle Mac & Cheese",
-            "Classic Eggs Benedict",
-            "Sweet Potato Pancakes",
-            "Avocado Toast",
-            "Seasonal Quiche"
-        ]
-    },
-    {
-        icon: `${images.food6}`,
-        title: "World Flavors & Fusion",
-        text: [
-            "Korean BBQ Short Ribs",
-            "Mediterranean Mezze Platter",
-            "Thai Green Curry",
-            "Tandoori Salmon",
-            "Latin Street Tacos"
-        ]
-    },
-    {
-        icon: `${images.food7}`,
-        title: "Pastries, Desserts & Sweets",
-        text: [
-            "Classic Tiramisu",
-            "Yuzu Sorbet",
-            "Chocolate Lava Cake",
-            "Seasonal Fruit Tart",
-            "Freshly Baked Croissants & Danish",
-            "Ice Cream Trio"
-        ]
-    },
-    {
-        icon: `${images.food3}`,
-        title: "Sides & Add-Ons",
-        text: [
-            "Truffle Parmesan Fries",
-            "Grilled Seasonal Vegetables",
-            "Garlic Butter Broccolini",
-            "Seasonal Fruit Tart",
-            "Creamy Polenta",
-            "House-Baked Focaccia"
-        ]
-    },
-    {
-        icon: `${images.drink5}`,
-        title: "Alcoholic & cocktails",
-        text: [
-            "Spicy Margarita: Tequila, mango, lime, chili syrup",
-            "Gin Gin Mule: Gin, ginger beer, lime, mint",
-            "Elderflower Martini: Vodka, elderflower liqueur, lemon",
-            "White Russian: Vodka, coffee liqueur, cream",
-            "Craft Beer: Local IPA,Belgian Wheat,Stout of the Day",
-            "Wine: Chardonnay (California),Sauvignon Blanc (New Zealand),Pinot Noir (Oregon),Malbec (Argentina)",
-            "Spicy Nimbu Pani Cocktail: Vodka or gin, lime, black salt, serrano pepper"
-        ]
-    },
-    {
-        icon: `${images.drink8}`,
-        title: "Non-Alcoholic & Mocktails",
-        text: [
-            "Citrus Fizz: Orange, lemon, tonic, basil",
-            "Berry Bliss: Mixed berries, lime, soda",
-            "Cucumber Cooler: Cucumber, mint, lime, soda",
-            "Mango Mojito: Mango, mint, lime, soda",
-            "Nimbu Pani : Indian lemonade, black salt, mint",
-            "Virgin Mojito: Mint, lime, soda",
-            "Rose Lemonade: Rose syrup, lemon, soda"
-        ]
-    },
-    {
-        icon: `${images.drink3}`,
-        title: "Teas & Coffees",
-        text: [
-            "Masala Chai: Indian spiced tea",
-            "Ginger Lemon Tea",
-            "Herbal Teas: chamomile, mint, jasmine",
-            "South Indian Filter Coffeet",
-            "Iced Matcha Latte",
-            "Classic Cappuccino",
-            "Cardamom Rose Latte",
-            "Turmeric Golden Milk Latte"
-        ]
-    }
+// data.js
+
+const menuData = [
+  {
+    category: "Lunch",
+    sections: [
+      {
+        title: "Starters",
+        items: [
+          { name: "MARLOWE FRIES", description: "herbs, sea salt & horseradish aioli", price: 945 },
+          { name: "BRUSSELS SPROUTS CHIPS", description: "lemon & sea salt", price: 1120 },
+          { name: "Warm DEVILED EGG", description: "aged provolone, pickled jalapeño & bacon", price: 470 },
+          { name: "Crispy POTATO CROQUETTES", description: "mozzarella cheese & homemade ranch", price: 1440 },
+        ],
+      },
+      {
+        title: "Mains",
+        items: [
+          {
+            name: "Grilled SKIRT STEAK Salad",
+            description: "head lettuces, shaved parmesan, smoked olive oil & steak sauce vinaigrette",
+            price: 2930,
+          },
+          {
+            name: "Spicy Brick CHICKEN",
+            description: "roasted cauliflower & Calabrian chili romesco",
+            price: 3110,
+          },
+          {
+            name: "Grilled SCALLOPS",
+            description: "avocado, la rossa radicchio & citrus",
+            price: 2780,
+          },
+        ],
+      },
+      {
+        title: "Salads, Soup & Starters",
+        items: [
+          { name: "Baby Head LETTUCES", description: "herbs & citrus-shallot vinaigrette", price: 1772 },
+          {
+            name: "Sweet Gem LETTUCES",
+            description: "Point Reyes blue cheese, candied bacon, herbed breadcrumbs & red wine vinaigrette",
+            price: 1720,
+          },
+          {
+            name: "Grilled SKIRT STEAK Salad",
+            description: "head lettuces, shaved parmesan, smoked olive oil & steak sauce vinaigrette",
+            price: 4185,
+          },
+          { name: "Grilled GULF SHRIMP", description: "HOT & boozy cocktail sauce", price: 1690 },
+          {
+            name: "Grilled Delta ASPARAGUS",
+            description: "prosciutto di parma & lemon hollandaise",
+            price: 3260,
+          },
+          {
+            name: "Herb Crusted LAMB RIBS",
+            description: "fresno chili salsa verde & mint",
+            price: 2870,
+          },
+        ],
+      },
+      {
+        title: "Sandwiches",
+        items: [
+          {
+            name: "FAVA BEAN HUMMUS SANDWICH",
+            description: "toasted rosemary focaccia, garlic-chili broccolini, persian cucumber, pea sprouts & oregano vinaigrette",
+            price: 1690,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    category: "Brunch",
+    sections: [
+      {
+        title: "Snacks",
+        items: [
+          { name: "Grilled GULF SHRIMP", description: "HOT & boozy cocktail sauce", price: 1459 },
+          { name: "Warm Deviled EGG", description: "aged provolone, pickled jalapeño & bacon", price: 393 },
+          { name: "Marlowe FRIES", description: "sea salt & herbs", price: 945 },
+          { name: "Crispy POTATO CROQUETTES", description: "mozzarella cheese & homemade ranch", price: 1440 },
+        ],
+      },
+      {
+        title: "Sweets",
+        items: [
+          {
+            name: "Brûléed BANANA & SPRING BERRIES",
+            description: "coconut yogurt & toasted macadamia",
+            price: 1455,
+          },
+          {
+            name: "FRENCH TOAST Soldiers",
+            description: "strawberry & chocolate sauces for dipping",
+            price: 1365,
+          },
+          {
+            name: "LEMON RICOTTA Doughnuts",
+            description: "blueberry-thyme compôte",
+            price: 1860,
+          },
+          {
+            name: "Buttermilk PANCAKES",
+            description: "smoked maple syrup, whipped butter & smoked salt",
+            price: 1455,
+          },
+          {
+            name: "Candied Butchers Cut BACON",
+            description: "thick cut, maple & brown sugar",
+            price: 2460,
+          },
+        ],
+      },
+      {
+        title: "Savories",
+        items: [
+          {
+            name: "AVOCADO Toast",
+            description: "grilled levain, toasted garlic-chili, lemon & sea salt",
+            price: 1449,
+          },
+          {
+            name: "Marlowe EGG SANDWICH",
+            description: "soft scrambled eggs, cheddar, dijionaise, arugula & salsa verde",
+            price: 1535,
+          },
+          {
+            name: "Farm Egg SCRAMBLE",
+            description: "cauliflower, broccolini, red onion, cheddar & crème fraiche with grilled bread",
+            price: 1899,
+          },
+          {
+            name: "Smoked SALMON Tartine",
+            description: "focaccia, horseradish cream, poached egg & hollandaise",
+            price: 2140,
+          },
+          {
+            name: "Anson Mills POLENTA",
+            description: "wild mushrooms, poached egg, parmesan, arugula & truffled salsa verde",
+            price: 2400,
+          },
+          {
+            name: "Marlowe BURGER",
+            description: "caramelized onions, cheddar, bacon & horseradish aioli with fries",
+            price: 2335,
+          },
+          {
+            name: "LEMON RICOTTA Doughnuts",
+            description: "blueberry-thyme compôte",
+            price: 1755,
+          },
+          {
+            name: "Black Pepper & Parmesan GOUGÈRES",
+            description: "smoked salmon, whipped crème fraiche, tarragon & dill",
+            price: 2300,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    category: "Mid Day Menu",
+    sections: [
+      {
+        title: "",
+        items: [
+          { name: "Crispy BRUSSELS SPROUTS Chips", description: "lemon & sea salt", price: 1340 },
+          { name: "Warm Deviled EGG", description: "aged provolone, pickled jalapeño & bacon", price: 478 },
+          { name: "Blood ORANGES & Baby BEETS", description: "frisee, burrata & candied sesame", price: 1420 },
+          { name: "Grilled GULF SHRIMP", description: "HOT & boozy cocktail sauce", price: 2870 },
+          {
+            name: "Marlowe BURGER",
+            description: "caramelized onions, cheddar, bacon, horseradish aioli & fries",
+            price: 2570,
+          },
+          {
+            name: "Herb Crusted LAMB RIBS",
+            description: "fresno chili salsa verde & mint",
+            price: 2880,
+          },
+          {
+            name: "Crispy POTATO CROQUETTES",
+            description: "mozzarella cheese & homemade ranch",
+            price: 2440,
+          },
+          {
+            name: "Grilled Delta ASPARAGUS",
+            description: "prosciutto di parma & lemon hollandaise",
+            price: 3140,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    category: "Dessert",
+    sections: [
+      {
+        title: "",
+        items: [
+          {
+            name: "Maria's BREAD PUDDING",
+            description: "banana, raisin, vanilla bean ice cream & bourbon caramel",
+            price: 1120,
+          },
+          {
+            name: "Chocolate CAKE",
+            description: "crème chantilly, fresh strawberries & strawberry sauce",
+            price: 1640,
+          },
+          {
+            name: "Loretta's VACHERIN",
+            description: "coffee ice cream, crème anglaise, almonds & chocolate sauce",
+            price: 1820,
+          },
+          {
+            name: "Vanilla Bean CHEESECAKE",
+            description: "Spring berries & sesame crisp",
+            price: 1540,
+          },
+          {
+            name: "CHOCOLATE PEANUT BUTTER Bites",
+            description: "guittard chocolate & peanuts",
+            price: 760,
+          },
+        ],
+      },
+    ],
+  },
 ];
+
+
+const menuIntro = {
+  description: `Ready to treat your taste buds? Dive into our menu and explore a world of flavors crafted just for you. Craving something classic or feeling adventurous? Let’s find your perfect dish together!`,
+  buttonText: "Indulge",
+  image: `${images.drink3}`, 
+};
+
 
 const dining_experience = [
     {
@@ -311,5 +434,5 @@ const footerData = [
 ];
 
 export default{
-    what_we_offer, menu, dining_experience, gallery, team, footerData
+    what_we_offer, menuData,menuIntro, dining_experience, gallery, team, footerData
 };
