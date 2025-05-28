@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# INDRIYA
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Indriya Restaurant Website project — a lovingly crafted online presence for a modern, vibrant restaurant that aims to delight every guest. This website is designed not just to showcase the menu, but to tell the story of Indriya’s unique culinary experience, inviting visitors to explore the rich flavors, warm ambiance, and exceptional service that define the restaurant.
 
-## Available Scripts
+Built with React and modern web technologies, this project balances aesthetic beauty with practical functionality. Whether you're a first-time visitor curious about the menu or a returning guest wanting to book a table or view the latest offerings, the site provides a seamless and engaging experience.
 
-In the project directory, you can run:
+From smooth navigation between beautifully animated sections on the homepage to a dedicated menu page featuring easy-to-use tabs for different meal categories, every detail has been thoughtfully implemented. The responsive design ensures that whether you’re browsing on a phone, tablet, or desktop, the site feels intuitive and inviting.
 
-### `npm start`
+This project is not only a showcase of technical skills but also a celebration of good food and hospitality, bringing the spirit of Indriya right to the fingertips of its guests.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Features
+1. Responsive Design: Fully optimized for mobile, tablet, and desktop.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Multipage Navigation: Navigate between homepage and a dedicated menu page using React Router.
 
-### `npm test`
+3. Smooth Same-Page Navigation: Instantly scroll to homepage sections (e.g., Menu, Gallery, Team) via navbar links.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. Animated UI: Uses AOS (Animate On Scroll) for elegant section transitions.
 
-### `npm run build`
+5. Tabbed Menu Page: Dedicated menu page with category tabs (Lunch, Dinner, Brunch, etc.) and dynamic content switching.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+6. Reusable Components: Modular structure with components for Header, Navbar, Menu, Gallery, Team, Support, and Footer.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+7. Accessible & Semantic: Uses semantic HTML and accessible navigation.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+8. Easy Customization: All content and menu data managed in a single data.js file.
 
-### `npm run eject`
+## 🧩 Built With
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+React
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+React Router
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+AOS (Animate On Scroll)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Custom CSS
