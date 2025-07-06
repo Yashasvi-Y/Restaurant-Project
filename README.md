@@ -37,5 +37,21 @@ Custom CSS
 
 
 
+🔮 Future Scope
+While the current version offers a delightful static experience, several dynamic enhancements are planned to elevate the website into a fully interactive platform:
 
-and still building >_<
+User Authentication:
+Enable users to create accounts, log in, and manage preferences for a personalized experience.
+
+Online Table Booking:
+Integrate a real-time table reservation system to allow guests to book tables seamlessly from the site.
+
+Online Food Ordering:
+Develop a complete online ordering and checkout flow for delivery or pickup, integrated with secure payment gateways.
+
+Admin Dashboard:
+Build an admin interface for staff to manage reservations, orders, and update menu content dynamically.
+
+Reviews & Ratings:
+Allow users to leave feedback, view ratings, and share their experiences with the Indriya community.
+
