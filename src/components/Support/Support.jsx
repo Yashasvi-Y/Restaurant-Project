@@ -1,4 +1,3 @@
-import data from "../../constants/data";
 import images from "../../constants/images";
 import "./Support.css";
 

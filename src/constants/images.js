@@ -50,6 +50,8 @@ import cafe from "../assets/images/Cafe.png";
 import takeaway from "../assets/images/takeaway.png";
 import orderOnline from "../assets/images/orderOnline.png";
 
-export default{
+const images = 
+{
     header_image,chef,chef1,chef1a,chef2,chef2a,chef3,chef3a,chef4,chef4a,takeOrder,takeOrder_a,takeOrder2,takeOrder2a,drink1,drink2,drink3,drink4,drink5,drink6,drink7,drink8,people1,people2,people3,people4,food1,food2,food3,food4,food5,food6,food7,team1,team1a,team2,team2a,team3,team4,team4a,team5,team6,team6a,team7,team8,meals,meals2,dine,cafe,takeaway,orderOnline
 }
+export default images;

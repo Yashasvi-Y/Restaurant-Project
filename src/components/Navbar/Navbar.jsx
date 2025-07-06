@@ -1,40 +1,18 @@
 import { useState } from "react";
-import"./Navbar.css"; 
-import {FaBars, FaTimes} from "react-icons/fa";
-import { Link } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
+import "./Navbar.css"; 
+import { FaBars, FaTimes } from "react-icons/fa";
 
 
 const Navbar = () => {
-    const [click, setClick] = useState(false);
+    const [ click, setClick ] = useState(false);
     const handleClick = () => setClick(!click);
     const close = () => setClick(false);
-
-        const location = useLocation();
-
-    // Handles "home" click
-    const handleHomeClick = (e) => {
-        if (location.pathname === "/") {
-            // Already on homepage: scroll to header (or top)
-            e.preventDefault();
-            setClick(false); // close mobile menu if open
-            const header = document.getElementById("header");
-            if (header) {
-                header.scrollIntoView({ behavior: "smooth" });
-            } else {
-                window.scrollTo({ top: 0, behavior: "smooth" });
-            }
-        } else {
-            // Navigating to homepage, close menu
-            setClick(false);
-        }
-    };
-
+    
     return(
         <nav className="navbar">
             <div className="container flex navbar-content">
                 <div className="brand-and-toggler flex">
-                    <Link to="/" className="navbar-brand text-upper fw-7 fs-22 flex"><span className="text-white">INDRIYA</span></Link>
+                    <a href="#header" className="navbar-brand text-upper fw-7 fs-22 flex"><span className="text-white">INDRIYA</span></a>
                     <button type="button" className="navbar-show-btn text-white" onClick={() => handleClick()}>
                         <FaBars size={26}/>
                     </button>
@@ -43,7 +21,7 @@ const Navbar = () => {
                     <button type="button" className="navbar-hide-btn text-white" onClick={() => close()}><FaTimes size={32}/></button>
                     <ul className="navbar-nav text-upper text-white fw-6 ls-1 fs-20 text-center">
                         <li className="nav-item">
-                            <Link to="/" className="nav-link" onClick={handleHomeClick}>home</Link>
+                            <a href="#header" className="nav-link">home</a>
                         </li>
                         <li className="nav-item">
                             <a href="#what-we-offer" className="nav-link">what we offer</a>
@@ -69,6 +47,6 @@ const Navbar = () => {
             </div>
         </nav>
     )
-}
+};
 
 export default Navbar;                            

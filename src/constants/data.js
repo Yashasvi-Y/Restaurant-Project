@@ -50,17 +50,17 @@ const menuData = [
           {
             name: "Grilled SKIRT STEAK Salad",
             description: "head lettuces, shaved parmesan, smoked olive oil & steak sauce vinaigrette",
-            price: 2930,
+            price: 2930
           },
           {
             name: "Spicy Brick CHICKEN",
             description: "roasted cauliflower & Calabrian chili romesco",
-            price: 3110,
+            price: 3110
           },
           {
             name: "Grilled SCALLOPS",
             description: "avocado, la rossa radicchio & citrus",
-            price: 2780,
+            price: 2780
           },
         ],
       },
@@ -71,23 +71,23 @@ const menuData = [
           {
             name: "Sweet Gem LETTUCES",
             description: "Point Reyes blue cheese, candied bacon, herbed breadcrumbs & red wine vinaigrette",
-            price: 1720,
+            price: 1720
           },
           {
             name: "Grilled SKIRT STEAK Salad",
             description: "head lettuces, shaved parmesan, smoked olive oil & steak sauce vinaigrette",
-            price: 4185,
+            price: 4185
           },
           { name: "Grilled GULF SHRIMP", description: "HOT & boozy cocktail sauce", price: 1690 },
           {
             name: "Grilled Delta ASPARAGUS",
             description: "prosciutto di parma & lemon hollandaise",
-            price: 3260,
+            price: 3260
           },
           {
             name: "Herb Crusted LAMB RIBS",
             description: "fresno chili salsa verde & mint",
-            price: 2870,
+            price: 2870
           },
         ],
       },
@@ -97,7 +97,7 @@ const menuData = [
           {
             name: "FAVA BEAN HUMMUS SANDWICH",
             description: "toasted rosemary focaccia, garlic-chili broccolini, persian cucumber, pea sprouts & oregano vinaigrette",
-            price: 1690,
+            price: 1690
           },
         ],
       },
@@ -121,27 +121,27 @@ const menuData = [
           {
             name: "Brûléed BANANA & SPRING BERRIES",
             description: "coconut yogurt & toasted macadamia",
-            price: 1455,
+            price: 1455
           },
           {
             name: "FRENCH TOAST Soldiers",
             description: "strawberry & chocolate sauces for dipping",
-            price: 1365,
+            price: 1365
           },
           {
             name: "LEMON RICOTTA Doughnuts",
             description: "blueberry-thyme compôte",
-            price: 1860,
+            price: 1860
           },
           {
             name: "Buttermilk PANCAKES",
             description: "smoked maple syrup, whipped butter & smoked salt",
-            price: 1455,
+            price: 1455
           },
           {
             name: "Candied Butchers Cut BACON",
             description: "thick cut, maple & brown sugar",
-            price: 2460,
+            price: 2460
           },
         ],
       },
@@ -151,42 +151,42 @@ const menuData = [
           {
             name: "AVOCADO Toast",
             description: "grilled levain, toasted garlic-chili, lemon & sea salt",
-            price: 1449,
+            price: 1449
           },
           {
             name: "Marlowe EGG SANDWICH",
             description: "soft scrambled eggs, cheddar, dijionaise, arugula & salsa verde",
-            price: 1535,
+            price: 1535
           },
           {
             name: "Farm Egg SCRAMBLE",
             description: "cauliflower, broccolini, red onion, cheddar & crème fraiche with grilled bread",
-            price: 1899,
+            price: 1899
           },
           {
             name: "Smoked SALMON Tartine",
             description: "focaccia, horseradish cream, poached egg & hollandaise",
-            price: 2140,
+            price: 2140
           },
           {
             name: "Anson Mills POLENTA",
             description: "wild mushrooms, poached egg, parmesan, arugula & truffled salsa verde",
-            price: 2400,
+            price: 2400
           },
           {
             name: "Marlowe BURGER",
             description: "caramelized onions, cheddar, bacon & horseradish aioli with fries",
-            price: 2335,
+            price: 2335
           },
           {
             name: "LEMON RICOTTA Doughnuts",
             description: "blueberry-thyme compôte",
-            price: 1755,
+            price: 1755
           },
           {
             name: "Black Pepper & Parmesan GOUGÈRES",
             description: "smoked salmon, whipped crème fraiche, tarragon & dill",
-            price: 2300,
+            price: 2300
           },
         ],
       },
@@ -205,12 +205,12 @@ const menuData = [
           {
             name: "Marlowe BURGER",
             description: "caramelized onions, cheddar, bacon, horseradish aioli & fries",
-            price: 2570,
+            price: 2570
           },
           {
             name: "Herb Crusted LAMB RIBS",
             description: "fresno chili salsa verde & mint",
-            price: 2880,
+            price: 2880
           },
           {
             name: "Crispy POTATO CROQUETTES",
@@ -220,7 +220,7 @@ const menuData = [
           {
             name: "Grilled Delta ASPARAGUS",
             description: "prosciutto di parma & lemon hollandaise",
-            price: 3140,
+            price: 3140
           },
         ],
       },
@@ -235,27 +235,27 @@ const menuData = [
           {
             name: "Maria's BREAD PUDDING",
             description: "banana, raisin, vanilla bean ice cream & bourbon caramel",
-            price: 1120,
+            price: 1120
           },
           {
             name: "Chocolate CAKE",
             description: "crème chantilly, fresh strawberries & strawberry sauce",
-            price: 1640,
+            price: 1640
           },
           {
             name: "Loretta's VACHERIN",
             description: "coffee ice cream, crème anglaise, almonds & chocolate sauce",
-            price: 1820,
+            price: 1820
           },
           {
             name: "Vanilla Bean CHEESECAKE",
             description: "Spring berries & sesame crisp",
-            price: 1540,
+            price: 1540
           },
           {
             name: "CHOCOLATE PEANUT BUTTER Bites",
             description: "guittard chocolate & peanuts",
-            price: 760,
+            price: 760
           },
         ],
       },
@@ -280,8 +280,7 @@ const dining_experience = [
             "Impeccable table service",
             "Curated wine and drink list",
             "Ambient lighting and live music"
-        ],
-        price : "1299"
+        ]
     },
     {
         type : "Takeaway",
@@ -290,18 +289,16 @@ const dining_experience = [
             "Express pickup lounge",
             "Pre-order and contactless payment",
             "Loyalty perks"
-        ],
-        price : "799"
+        ]
     },
     {
         type : "Order-Online",
         experience_list : [
             "Sleek, intuitive ordering platform",
             "Bespoke meal customization",
-            "Premium delivery packaging",
-            "Real-time order tracking"
-        ],
-        price : "689"
+            "Premium recyclable delivery packaging",
+            "Oorder tracking"
+        ]
     },
 ]
 
@@ -339,7 +336,7 @@ const gallery = [
 const team = [
     {
         img : `${images.chef3a}`,
-        name : "Rao Emma",
+        name : "Rayo Emma",
         post : "Executive Chef"
     },
     {
@@ -433,6 +430,7 @@ const footerData = [
   },
 ];
 
-export default{
+const datas = {
     what_we_offer, menuData,menuIntro, dining_experience, gallery, team, footerData
 };
+export default datas;

@@ -1,6 +1,5 @@
 import data from '../../constants/data';
 import './Footer.css'
-import { FaFacebookF, FaTwitter, FaInstagram, FaGoogle } from 'react-icons/fa';
 
 const Footer = () => (
   <footer className="footer">

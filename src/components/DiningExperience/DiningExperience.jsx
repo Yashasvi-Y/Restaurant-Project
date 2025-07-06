@@ -23,18 +23,15 @@ const DiningExperience = () =>{
                                             })
                                         }
                                     </ul>
-                                    <div className="dining-experience-item-price">
-                                        <span>₹{experience.price}</span> /meal
-                                    </div>
-                                    <a href="#" className="btn btn-accent">try now</a>
+                                    <a href="#" className="btn btn-accent">try today</a>
                                 </div>
-                            )
+                            );
                         })
                     }
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
 export default DiningExperience;
