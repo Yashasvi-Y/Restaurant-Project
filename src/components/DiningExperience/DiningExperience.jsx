@@ -1,5 +1,6 @@
 import data from "../../constants/data";
 import './DiningExperience.css';
+import { Link } from 'react-router-dom';
 
 const DiningExperience = () =>{
     return(
@@ -23,7 +24,7 @@ const DiningExperience = () =>{
                                             })
                                         }
                                     </ul>
-                                    <a href="#" className="btn btn-accent">try today</a>
+                                    <Link to="/coming-soon" className="btn btn-accent">try today</Link>
                                 </div>
                             );
                         })
