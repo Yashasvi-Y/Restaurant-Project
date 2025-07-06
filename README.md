@@ -37,7 +37,8 @@ Custom CSS
 
 
 
-🔮 Future Scope
+## 🔮 Future Scope
+
 While the current version offers a delightful static experience, several dynamic enhancements are planned to elevate the website into a fully interactive platform:
 
 User Authentication:
