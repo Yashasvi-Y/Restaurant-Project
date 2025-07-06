@@ -34,3 +34,8 @@ React Router
 AOS (Animate On Scroll)
 
 Custom CSS
+
+
+
+
+and still building >_<
