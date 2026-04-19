@@ -68,7 +68,6 @@ const AdminMenuPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const token = localStorage.getItem('authToken');
       const payload = {
         ...formData,
         price: parseFloat(formData.price),
