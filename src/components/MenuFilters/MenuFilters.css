@@ -1,0 +1,201 @@
+/* Menu Filters Styles */
+.menu-filters {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+}
+
+.filters-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filters-header h3 {
+  font-size: 20px;
+  color: #333;
+  margin: 0;
+}
+
+.clear-filters-btn {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.clear-filters-btn:hover {
+  background: #ee5a52;
+  transform: translateY(-2px);
+}
+
+.filter-section {
+  margin-bottom: 25px;
+}
+
+.filter-title {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.filter-desc {
+  font-size: 12px;
+  color: #999;
+  margin: 4px 0 12px 0;
+}
+
+.filter-options {
+  display: flex;
+  gap: 10px;
+}
+
+.category-select {
+  padding: 10px 14px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.category-select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-btn {
+  padding: 10px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 20px;
+  background: white;
+  font-size: 13px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.filter-btn:hover {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.filter-btn.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.filter-btn.dietary.active {
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+  border-color: #4CAF50;
+}
+
+.active-filters {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.active-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #666;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+}
+
+.filter-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.filter-tag button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.filter-tag button:hover {
+  opacity: 0.7;
+}
+
+.allergen-tag {
+  background: #ffe0e0;
+  color: #c33;
+}
+
+.dietary-tag {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.category-tag {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.filters-loading {
+  text-align: center;
+  padding: 20px;
+  color: #999;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu-filters {
+    padding: 20px;
+  }
+
+  .filters-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .filter-buttons {
+    gap: 8px;
+  }
+
+  .filter-btn {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}

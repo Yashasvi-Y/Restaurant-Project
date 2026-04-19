@@ -134,6 +134,28 @@
   border: 2px solid var(--accent-color);
 }
 
+/* Back button */
+.btn-back {
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.btn-back:hover {
+  color: var(--dark-color);
+  transform: translateX(-5px);
+}
+
 /* spacing */
 .ls-1{
   letter-spacing: 1px;

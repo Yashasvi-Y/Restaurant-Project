@@ -1,0 +1,225 @@
+/* Seasonal Specials Carousel Styles */
+.seasonal-specials {
+  background: linear-gradient(135deg, #f5f7fa 0%, #fff 100%);
+  padding: 60px 20px;
+  margin: 40px 0;
+}
+
+.seasonal-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.seasonal-header h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.seasonal-header p {
+  color: #666;
+  font-size: 16px;
+}
+
+.carousel-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.carousel-slide {
+  flex: 1;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.carousel-slide:hover {
+  transform: translateY(-5px);
+}
+
+.slide-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 40px;
+  align-items: center;
+}
+
+.slide-image {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+.slide-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  background: linear-gradient(135deg, #e0e7ff 0%, #f0e7ff 100%);
+}
+
+.slide-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a2d 100%);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  width: fit-content;
+  text-transform: uppercase;
+}
+
+.slide-info h3 {
+  font-size: 24px;
+  color: #333;
+  margin: 0;
+}
+
+.description {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.price {
+  font-size: 28px;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.btn-order {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: fit-content;
+}
+
+.btn-order:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.carousel-btn {
+  background: white;
+  border: 1px solid #ddd;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  flex-shrink: 0;
+}
+
+.carousel-btn:hover {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ddd;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.dot.active {
+  background: #667eea;
+  width: 30px;
+  border-radius: 5px;
+}
+
+.seasonal-loading {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .slide-content {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .slide-image {
+    height: 200px;
+  }
+
+  .seasonal-header h2 {
+    font-size: 24px;
+  }
+
+  .carousel-slide {
+    min-height: auto;
+  }
+}

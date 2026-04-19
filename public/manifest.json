@@ -1,0 +1,16 @@
+{
+  "short_name": "Restaurant",
+  "name": "Restaurant Project",
+  "icons": [
+    {
+      "src": "Indriya-logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#000000"
+}

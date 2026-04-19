@@ -19,7 +19,6 @@ const WhatWeOffer = () =>{
                                 <div className="what-we-offer-item-right" data-aos="fade-left">
                                     <h4 className="text-upper fs-20">{whatItem.title}</h4>
                                     <p className="text mx-auto">{whatItem.paragraph}</p>
-                                    <a href="#" className="btn btn-accent">view more</a>
                                 </div>
                             </div>)
                         })

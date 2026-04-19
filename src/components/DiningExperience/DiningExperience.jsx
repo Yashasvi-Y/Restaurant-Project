@@ -1,8 +1,19 @@
 import data from "../../constants/data";
 import './DiningExperience.css';
-import { Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const DiningExperience = () =>{
+    const navigate = useNavigate();
+    
+    const handleReservation = () => {
+        const user = localStorage.getItem('user');
+        if (!user) {
+            navigate('/login');
+        } else {
+            navigate('/booking');
+        }
+    };
+    
     return(
         <section className="dining-experience py-6" id="dining-experience">
             <div className="container">
@@ -24,7 +35,11 @@ const DiningExperience = () =>{
                                             })
                                         }
                                     </ul>
-                                    <Link to="/coming-soon" className="btn btn-accent">try today</Link>
+                                    {experience.type === 'Dine-In' ? (
+                                        <button onClick={handleReservation} className="btn btn-accent">Reserve Now</button>
+                                    ) : (
+                                        <Link to="/coming-soon" className="btn btn-accent">Try Today</Link>
+                                    )}
                                 </div>
                             );
                         })

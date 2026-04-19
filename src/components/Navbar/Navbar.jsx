@@ -1,12 +1,32 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Navbar.css"; 
 import { FaBars, FaTimes } from "react-icons/fa";
-
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
     const [ click, setClick ] = useState(false);
+    const [user, setUser] = useState(null);
+    const [showDropdown, setShowDropdown] = useState(false);
+    const navigate = useNavigate();
+    
     const handleClick = () => setClick(!click);
     const close = () => setClick(false);
+    
+    useEffect(() => {
+      const storedUser = localStorage.getItem('user');
+      if (storedUser) {
+        setUser(JSON.parse(storedUser));
+      }
+    }, []);
+    
+    const handleLogout = () => {
+      localStorage.removeItem('authToken');
+      localStorage.removeItem('user');
+      setUser(null);
+      navigate('/');
+      setShowDropdown(false);
+      close();
+    };
     
     return(
         <nav className="navbar">
@@ -38,10 +58,44 @@ const Navbar = () => {
                         <li className="nav-item">
                             <a href="#team" className="nav-link">team</a>
                         </li>
-                        <li className="nav-item">
-                            <a href="#support" className="nav-link">support</a>
-                        </li>
-
+                        {user ? (
+                          <li className="nav-item dropdown">
+                            <button 
+                              className="nav-link dropdown-btn"
+                              onClick={() => setShowDropdown(!showDropdown)}
+                              style={{background: 'none', border: 'none', cursor: 'pointer'}}
+                            >
+                              {user.name || user.email} ▼
+                            </button>
+                            {showDropdown && (
+                              <div className="dropdown-menu">
+                                {user.role === 'admin' && (
+                                  <Link to="/admin" className="dropdown-item admin-link" onClick={() => { setShowDropdown(false); close(); }}>
+                                    📊 Admin Dashboard
+                                  </Link>
+                                )}
+                                <Link to="/account" className="dropdown-item" onClick={() => { setShowDropdown(false); close(); }}>
+                                  My Account
+                                </Link>
+                                <button 
+                                  onClick={handleLogout}
+                                  className="dropdown-item logout-btn"
+                                >
+                                  Logout
+                                </button>
+                              </div>
+                            )}
+                          </li>
+                        ) : (
+                          <>
+                            <li className="nav-item">
+                              <Link to="/login" className="nav-link">login</Link>
+                            </li>
+                            <li className="nav-item">
+                              <Link to="/register" className="nav-link">register</Link>
+                            </li>
+                          </>
+                        )}
                     </ul>
                 </div>
             </div>
