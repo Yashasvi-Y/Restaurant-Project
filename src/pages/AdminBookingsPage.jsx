@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AdminLayout from '../components/AdminLayout';
-import { apiGet, apiPut, apiDelete } from '../utils/api';
+import { apiGet, apiPut } from '../utils/api';
 import './AdminBookingsPage.css';
 
 const AdminBookingsPage = () => {
@@ -15,6 +15,37 @@ const AdminBookingsPage = () => {
 
   useEffect(() => {
     fetchBookings();
+    
+    // Auto-complete bookings 120 mins after reservation time
+    const autoCompleteInterval = setInterval(() => {
+      setBookings(prevBookings => {
+        const updatedBookings = prevBookings.map(booking => {
+          // Skip if already completed or cancelled
+          if (booking.status === 'completed' || booking.status === 'cancelled') {
+            return booking;
+          }
+          
+          // Check if booking is past and 120+ mins have elapsed
+          const reservationDateTime = new Date(booking.reservationDate);
+          const [hours, minutes] = booking.reservationTime.split(':');
+          reservationDateTime.setHours(parseInt(hours), parseInt(minutes), 0, 0);
+          
+          const endTime = new Date(reservationDateTime.getTime() + 120 * 60 * 1000); // 120 mins later
+          const now = new Date();
+          
+          if (now > endTime && getStatusColor(booking.reservationDate) === 'past') {
+            // Auto-update to completed
+            autoUpdateBookingStatus(booking._id, 'completed');
+            return { ...booking, status: 'completed' };
+          }
+          
+          return booking;
+        });
+        return updatedBookings;
+      });
+    }, 60000); // Check every minute
+    
+    return () => clearInterval(autoCompleteInterval);
   }, []);
 
   const fetchBookings = async () => {
@@ -85,11 +116,12 @@ const AdminBookingsPage = () => {
     if (!window.confirm('Are you sure you want to cancel this booking?')) return;
     
     try {
-      const response = await apiDelete(`/bookings/${bookingId}`);
+      const response = await apiPut(`/bookings/${bookingId}/cancel`, { cancelledBy: 'admin' });
 
       if (response.ok) {
         fetchBookings();
         setSelectedBooking(null);
+        alert('Booking cancelled successfully');
       } else {
         setError('Failed to cancel booking');
       }
@@ -99,12 +131,20 @@ const AdminBookingsPage = () => {
     }
   };
 
+  const autoUpdateBookingStatus = async (bookingId, status) => {
+    try {
+      await apiPut(`/bookings/${bookingId}/status`, { status });
+    } catch (err) {
+      console.error('Error auto-updating booking status:', err);
+    }
+  };
+
   return (
     <AdminLayout>
       <div className="admin-bookings-page">
         <div className="page-header-admin">
           <button className="btn-back" onClick={() => navigate('/admin')}>← Back</button>
-          <h2>Manage Bookings 📅</h2>
+          <h2>Manage Bookings</h2>
         </div>
 
         {loading ? (
@@ -113,7 +153,7 @@ const AdminBookingsPage = () => {
           <div className="error-message">{error}</div>
         ) : bookings.length === 0 ? (
           <div className="empty-state">
-            <p>📭 No bookings yet</p>
+            <p>No bookings yet</p>
           </div>
         ) : (
           <div className="bookings-table-container">
@@ -154,8 +194,8 @@ const AdminBookingsPage = () => {
                         )}`}
                       >
                         {getStatusColor(booking.reservationDate) === 'upcoming'
-                          ? '🟢 Upcoming'
-                          : '⚫ Past'}
+                          ? 'Upcoming'
+                          : 'Past'}
                       </span>
                     </td>
                   </tr>
@@ -169,7 +209,7 @@ const AdminBookingsPage = () => {
         {selectedBooking && (
           <div className="modal-overlay" onClick={() => setSelectedBooking(null)}>
             <div className="modal booking-details-modal" onClick={(e) => e.stopPropagation()}>
-              <button className="modal-close" onClick={() => setSelectedBooking(null)}>✕</button>
+              <button className="modal-close" onClick={() => setSelectedBooking(null)}>×</button>
               <h3>Booking Details</h3>
               <div className="booking-details">
                 <div className="detail-row">
@@ -206,24 +246,30 @@ const AdminBookingsPage = () => {
                 </div>
               </div>
               <div className="modal-actions">
-                <button 
-                  className="btn-edit" 
-                  onClick={() => {
-                    handleEditClick(selectedBooking);
-                    setSelectedBooking(null);
-                  }}
-                >
-                  Edit Status
-                </button>
-                <button 
-                  className="btn-cancel-booking" 
-                  onClick={() => {
-                    handleCancelBooking(selectedBooking._id);
-                    setSelectedBooking(null);
-                  }}
-                >
-                  Cancel Booking
-                </button>
+                {getStatusColor(selectedBooking.reservationDate) === 'upcoming' && selectedBooking.status !== 'cancelled' ? (
+                  <>
+                    <button 
+                      className="btn-edit" 
+                      onClick={() => {
+                        handleEditClick(selectedBooking);
+                        setSelectedBooking(null);
+                      }}
+                    >
+                      Edit Status
+                    </button>
+                    <button 
+                      className="btn-cancel-booking" 
+                      onClick={() => {
+                        handleCancelBooking(selectedBooking._id);
+                        setSelectedBooking(null);
+                      }}
+                    >
+                      Cancel Booking
+                    </button>
+                  </>
+                ) : (
+                  <p className="info-text">This booking cannot be modified</p>
+                )}
               </div>
             </div>
           </div>
@@ -233,7 +279,7 @@ const AdminBookingsPage = () => {
         {showEditModal && editingBooking && (
           <div className="modal-overlay" onClick={() => setShowEditModal(false)}>
             <div className="modal" onClick={(e) => e.stopPropagation()}>
-              <button className="modal-close" onClick={() => setShowEditModal(false)}>✕</button>
+              <button className="modal-close" onClick={() => setShowEditModal(false)}>×</button>
               <h3>Edit Booking Status</h3>
               <div className="booking-edit-form">
                 <div className="form-group">

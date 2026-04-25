@@ -82,6 +82,8 @@ export const reviewAPI = {
   
   submitReview: (data) => apiClient.post('/reviews', data),
   
+  getAllReviews: () => apiClient.get('/reviews/admin/all'),
+  
   getPendingReviews: () => apiClient.get('/reviews/admin/pending'),
   
   approveReview: (id) => apiClient.put(`/reviews/${id}/approve`),

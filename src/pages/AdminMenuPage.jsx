@@ -113,7 +113,7 @@ const AdminMenuPage = () => {
       <div className="admin-menu-page">
         <div className="page-header-admin">
           <button className="btn-back" onClick={() => navigate('/admin')}>← Back</button>
-          <h2>Manage Menu Items 🍽️</h2>
+          <h2>Manage Menu Items</h2>
           <button className="btn-add" onClick={handleAddClick}>+ Add Item</button>
         </div>
 

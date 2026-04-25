@@ -102,6 +102,14 @@ const UserAccount = () => {
     navigate('/');
   };
 
+  const getBookingStatus = (date) => {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const bookingDate = new Date(date);
+    bookingDate.setHours(0, 0, 0, 0);
+    return bookingDate >= today ? 'upcoming' : 'past';
+  };
+
   const handleCancelBooking = async (bookingId) => {
     if (!window.confirm('Are you sure you want to cancel this booking?')) return;
     
@@ -230,7 +238,7 @@ const UserAccount = () => {
                       <p><strong>Status:</strong> <span className={`status-badge ${booking.status}`}>{booking.status}</span>{booking.status === 'completed' && reviewedBookingIds.includes(booking._id) && <span className="status-badge reviewed-badge">Reviewed</span>}</p>
                       
                       <div className="booking-actions">
-                        {booking.status === 'confirmed' && (
+                        {booking.status === 'confirmed' && getBookingStatus(booking.reservationDate) === 'upcoming' && (
                           <button 
                             className="btn btn-small btn-cancel"
                             onClick={() => handleCancelBooking(booking._id)}

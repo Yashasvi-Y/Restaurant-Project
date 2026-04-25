@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { reviewAPI } from '../services/api';
+import { reviewAPI } from '../../services/api';
 import './CustomerReviews.css';
 
 const CustomerReviews = () => {
@@ -40,7 +40,11 @@ const CustomerReviews = () => {
   };
 
   const renderStars = (rating) => {
-    return '⭐'.repeat(rating);
+    let stars = '';
+    for (let i = 0; i < rating; i++) {
+      stars += '★ ';
+    }
+    return stars;
   };
 
   if (loading) {
@@ -54,7 +58,7 @@ const CustomerReviews = () => {
   return (
     <section className="customer-reviews">
       <div className="reviews-header">
-        <h2>📸 Guest Experiences</h2>
+        <h2>Guest Experiences</h2>
         <p>Photos and reviews from our wonderful customers</p>
       </div>
 
@@ -88,7 +92,7 @@ const CustomerReviews = () => {
                   handleLike(review._id);
                 }}
               >
-                👍 {review.likes}
+                {review.likes}
               </button>
             </div>
           </div>
@@ -135,7 +139,7 @@ const CustomerReviews = () => {
 
                 <div className="modal-footer">
                   <p className="visit-date">
-                    📅 {new Date(selectedReview.visitDate).toLocaleDateString()}
+                    {new Date(selectedReview.visitDate).toLocaleDateString()}
                   </p>
                   <button className="like-btn-large" onClick={() => {
                     handleLike(selectedReview._id);
@@ -147,7 +151,7 @@ const CustomerReviews = () => {
                       )
                     );
                   }}>
-                    👍 {selectedReview.likes} Likes
+                    {selectedReview.likes} Likes
                   </button>
                 </div>
               </div>

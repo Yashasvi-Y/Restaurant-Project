@@ -319,6 +319,7 @@
 
   .bookings-table-container {
     padding: 15px;
+    overflow-x: auto;
   }
 
   .bookings-table th,
@@ -333,5 +334,69 @@
 
   .bookings-table thead {
     font-size: 0.75rem;
+  }
+
+  .modal {
+    width: 95% !important;
+    max-height: 90vh;
+  }
+
+  .modal-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-edit, .btn-cancel-booking {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header-admin {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .admin-bookings-page h2 {
+    font-size: 1.2rem;
+  }
+
+  .bookings-table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .bookings-table {
+    min-width: 600px;
+  }
+
+  .bookings-table th,
+  .bookings-table td {
+    padding: 8px 6px;
+    font-size: 0.75rem;
+  }
+
+  .confirm-number, .special-requests {
+    max-width: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .modal {
+    width: 98% !important;
+    margin: auto;
+  }
+
+  .booking-details {
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+
+  .detail-row {
+    padding: 8px 0;
+    font-size: 0.9rem;
   }
 }

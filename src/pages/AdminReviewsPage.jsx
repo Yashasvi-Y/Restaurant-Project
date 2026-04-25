@@ -17,7 +17,7 @@ const AdminReviewsPage = () => {
 
   const fetchReviews = async () => {
     try {
-      const response = await apiGet('/reviews');
+      const response = await apiGet('/reviews/admin/all');
 
       if (response.ok) {
         const data = await response.json();
@@ -35,7 +35,7 @@ const AdminReviewsPage = () => {
 
   const handleApproveReview = async (reviewId) => {
     try {
-      const response = await apiPut(`/reviews/${reviewId}`, { isApproved: true });
+      const response = await apiPut(`/reviews/${reviewId}/approve`, {});
 
       if (response.ok) {
         fetchReviews();
@@ -49,7 +49,7 @@ const AdminReviewsPage = () => {
     if (!window.confirm('Are you sure you want to reject this review?')) return;
 
     try {
-      const response = await apiDelete(`/reviews/${reviewId}`);
+      const response = await apiDelete(`/reviews/${reviewId}/reject`);
 
       if (response.ok) {
         fetchReviews();
@@ -69,7 +69,7 @@ const AdminReviewsPage = () => {
       <div className="admin-reviews-page">
         <div className="page-header-admin">
           <button className="btn-back" onClick={() => navigate('/admin')}>← Back</button>
-          <h2>Manage Reviews ⭐</h2>
+          <h2>Manage Reviews</h2>
         </div>
 
         <div className="filter-tabs">
@@ -77,13 +77,13 @@ const AdminReviewsPage = () => {
             className={`tab ${filter === 'pending' ? 'active' : ''}`}
             onClick={() => setFilter('pending')}
           >
-            ⏳ Pending ({reviews.filter((r) => !r.isApproved).length})
+            Pending ({reviews.filter((r) => !r.isApproved).length})
           </button>
           <button
             className={`tab ${filter === 'approved' ? 'active' : ''}`}
             onClick={() => setFilter('approved')}
           >
-            ✅ Approved ({reviews.filter((r) => r.isApproved).length})
+            Approved ({reviews.filter((r) => r.isApproved).length})
           </button>
         </div>
 
@@ -93,7 +93,7 @@ const AdminReviewsPage = () => {
           <div className="error-message">{error}</div>
         ) : filteredReviews.length === 0 ? (
           <div className="empty-state">
-            <p>📭 No {filter} reviews</p>
+            <p>No {filter} reviews</p>
           </div>
         ) : (
           <div className="reviews-list">
@@ -103,7 +103,7 @@ const AdminReviewsPage = () => {
                   <div className="reviewer-info">
                     <h4>{review.userId?.name || 'Anonymous'}</h4>
                     <div className="rating">
-                      {'⭐'.repeat(review.rating)}{' '}
+                      {'★ '.repeat(review.rating)}{' '}
                       <span className="rating-number">({review.rating}/5)</span>
                     </div>
                   </div>
@@ -120,13 +120,13 @@ const AdminReviewsPage = () => {
                       className="btn btn-approve"
                       onClick={() => handleApproveReview(review._id)}
                     >
-                      ✅ Approve
+                      Approve
                     </button>
                     <button
                       className="btn btn-reject"
                       onClick={() => handleRejectReview(review._id)}
                     >
-                      ❌ Reject
+                      Reject
                     </button>
                   </div>
                 )}

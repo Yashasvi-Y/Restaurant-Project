@@ -175,13 +175,13 @@ const SupportFormPage = () => {
 
                         {errorMessage && (
                             <div className="message error-message">
-                                ⚠️ {errorMessage}
+                                {errorMessage}
                             </div>
                         )}
 
                         {successMessage && (
                             <div className="message success-message">
-                                ✓ {successMessage}
+                                {successMessage}
                             </div>
                         )}
 

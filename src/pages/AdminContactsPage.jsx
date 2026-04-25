@@ -160,7 +160,7 @@ const AdminContactsPage = () => {
                 className={`filter-btn ${statusFilter === 'replied' ? 'active' : ''}`}
                 onClick={() => setStatusFilter('replied')}
               >
-                🟢 Replied ({statusCounts.replied})
+                Replied ({statusCounts.replied})
               </button>
             </div>
 
@@ -264,7 +264,7 @@ const AdminContactsPage = () => {
                         onClick={handleSendReply}
                         disabled={replyLoading || !replyText.trim()}
                       >
-                        {replyLoading ? 'Sending...' : '📧 Send Reply'}
+                        {replyLoading ? 'Sending...' : 'Send Reply'}
                       </button>
                       <button
                         className="btn btn-mark-read"
@@ -286,16 +286,16 @@ const AdminContactsPage = () => {
                       handleChangeStatus(selectedContact._id, e.target.value)
                     }
                   >
-                    <option value="new">🔴 New</option>
-                    <option value="read">🟡 Read</option>
-                    <option value="replied">🟢 Replied</option>
-                    <option value="archived">⚫ Archived</option>
+                    <option value="new">New</option>
+                    <option value="read">Read</option>
+                    <option value="replied">Replied</option>
+                    <option value="archived">Archived</option>
                   </select>
                   <button
                     className="btn btn-delete"
                     onClick={() => handleDeleteContact(selectedContact._id)}
                   >
-                    🗑️ Delete
+                    Delete
                   </button>
                 </div>
               </div>
