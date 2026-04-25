@@ -1,58 +1,77 @@
 # INDRIYA
 
-Welcome to the Indriya Restaurant Website project — a lovingly crafted online presence for a modern, vibrant restaurant that aims to delight every guest. This website is designed not just to showcase the menu, but to tell the story of Indriya’s unique culinary experience, inviting visitors to explore the rich flavors, warm ambiance, and exceptional service that define the restaurant.
+Welcome to the Indriya Restaurant Website — a fully functional online platform designed to elevate every aspect of the dining experience. This website serves as the complete digital presence for Indriya, offering guests everything from seamless online reservations and comprehensive booking management to customer reviews and a powerful admin dashboard, this application brings a restaurant's entire operation into one intuitive interface. Whether you're discovering the menu, booking your table, or sharing your experience, Indriya delivers a smooth, professional experience across all devices.
 
-Built with React and modern web technologies, this project balances aesthetic beauty with practical functionality. Whether you're a first-time visitor curious about the menu or a returning guest wanting to book a table or view the latest offerings, the site provides a seamless and engaging experience.
+Built with modern web technologies, this full-stack platform balances visual elegance with robust functionality. From the beautifully animated homepage showcasing the restaurant's essence to the intuitive multi-step booking form and admin dashboard, every feature has been implemented to enhance both customer and staff experiences. The responsive design ensures flawless performance whether accessed from a mobile device, tablet, or desktop.
 
-From smooth navigation between beautifully animated sections on the homepage to a dedicated menu page featuring easy-to-use tabs for different meal categories, every detail has been thoughtfully implemented. The responsive design ensures that whether you’re browsing on a phone, tablet, or desktop, the site feels intuitive and inviting.
+This project represents a complete real-world application with production-ready features including user authentication, real-time booking management, review moderation, and automated processes. It stands as both a technical showcase of full-stack development capabilities and a practical solution that genuinely elevates the restaurant's online presence and operational efficiency.
 
-This project is not only a showcase of technical skills but also a celebration of good food and hospitality, bringing the spirit of Indriya right to the fingertips of its guests.
+## 🌟 Features
 
-## 🚀 Features
-1. Responsive Design: Fully optimized for mobile, tablet, and desktop.
+### Customer Features
 
-2. Multipage Navigation: Navigate between homepage and a dedicated menu page using React Router.
+- **User Authentication**: Email OTP verification + JWT token storage
+- **Booking System**: Browse availability, make reservations, manage bookings
+- **Menu Browsing**: Dynamic menu with filters by category/price/availability
+- **Reviews**: Submit ratings and reviews for completed bookings
+- **Account Management**: View booking history, track reservations, manage profile
+- **Responsive Design**: Mobile-first design for all screen sizes (phones, tablets, desktops)
+- **Responsive Tables**: Scrollable content on mobile, full layout on desktop
 
-3. Smooth Same-Page Navigation: Instantly scroll to homepage sections (e.g., Menu, Gallery, Team) via navbar links.
+### Admin Dashboard
 
-4. Animated UI: Uses AOS (Animate On Scroll) for elegant section transitions.
+- **Bookings Management**: View all reservations, edit status, cancel bookings
+- **Auto-Completion**: Bookings automatically marked complete 120+ mins after time
+- **Reviews Moderation**: Approve/reject pending reviews with admin dashboard
+- **Menu Management**: Add, edit, delete menu items
+- **Staff Management**: Manage staff profiles and showcase
+- **Contact Messages**: Handle customer support inquiries with reply system
+- **Protected Routes**: Role-based access control for admin-only pages
 
-5. Tabbed Menu Page: Dedicated menu page with category tabs (Lunch, Dinner, Brunch, etc.) and dynamic content switching.
+### User Experience
 
-6. Reusable Components: Modular structure with components for Header, Navbar, Menu, Gallery, Team, Support, and Footer.
+- **Past Booking Protection**: Cannot modify or cancel bookings that are in the past
+- **Clear Status Indicators**: Upcoming vs. Past bookings with visual distinction
+- **Cancel Confirmation**: Confirmation dialogs prevent accidental cancellations
+- **Real-time Feedback**: Success/error messages for all user actions
+- **Professional UI**: Consistent design with accent colors and smooth transitions
 
-7. Accessible & Semantic: Uses semantic HTML and accessible navigation.
+## Tech Stack
 
-8. Easy Customization: All content and menu data managed in a single data.js file.
+- **Frontend Framework**: React 18
+- **HTTP Client**: Axios
+- **Routing**: React Router v6
+- **Styling**: CSS3 with CSS variables
+- **Icons**: React Icons (FontAwesome)
+- **State Management**: React Hooks (useState, useEffect, useContext)
+- **Authentication**: JWT tokens with localStorage
+- **Deployment**: Netlify
 
-## 🧩 Built With
+## Future Scope
 
-React
+### ✅ Completed
 
-React Router
+- **User Authentication**: Email OTP verification + JWT token storage
+- **Online Table Booking**: Real-time reservation system with admin management
+- **Admin Dashboard**: Full-featured management interface for bookings, reviews, menu, staff, and contacts
+- **Reviews & Ratings**: User submissions with admin moderation workflow
+- **Responsive Design**: Mobile, tablet, and desktop optimization
+- **Past Booking Protection**: Secure bookings from unwanted modifications
 
-AOS (Animate On Scroll)
+### 🚀 Next to Implement
 
-Custom CSS
+- **Online Ordering**: Food ordering system with cart and checkout
+- **Payment Gateway Integration**: Secure payment processing (Stripe/Razorpay)
+- **Email/SMS Reminders**: Automated booking reminders and notifications
+- **Analytics Dashboard**: Booking trends, popular items, customer insights
+- **Advanced Filters**: Search and filter bookings by date, status, customer
+- **Photo Reviews**: Allow users to upload images with their reviews
+- **Promo Code System**: Discount codes for promotions and special offers
 
+## 🔗 Related Repository
 
+Backend: [Restaurant-Project-BE](https://github.com/Yashasvi-Y/Restaurant-Project-BE)
 
-## 🔮 Future Scope
+---
 
-While the current version offers a delightful static experience, several dynamic enhancements are planned to elevate the website into a fully interactive platform:
-
-User Authentication:
-Enable users to create accounts, log in, and manage preferences for a personalized experience.
-
-Online Table Booking:
-Integrate a real-time table reservation system to allow guests to book tables seamlessly from the site.
-
-Online Food Ordering:
-Develop a complete online ordering and checkout flow for delivery or pickup, integrated with secure payment gateways.
-
-Admin Dashboard:
-Build an admin interface for staff to manage reservations, orders, and update menu content dynamically.
-
-Reviews & Ratings:
-Allow users to leave feedback, view ratings, and share their experiences with the Indriya community.
-
+**Made by Yashasvi**
