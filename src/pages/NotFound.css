@@ -18,7 +18,7 @@
 
 .notfound-box h1 {
   font-size: 8rem;
-  font-family: var(--font-heading);
+  font-family: var(--font-base);
   color: var(--accent-color);
   margin-bottom: 1rem;
 }

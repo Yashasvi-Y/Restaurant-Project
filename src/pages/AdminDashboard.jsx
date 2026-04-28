@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import AdminLayout from '../components/AdminLayout';
 import { apiGet } from '../utils/api';
 import './AdminDashboard.css';
@@ -145,18 +145,18 @@ const AdminDashboard = () => {
         <div className="quick-actions">
           <h3>Quick Actions</h3>
           <div className="action-buttons">
-            <a href="/admin/contacts" className="action-btn contacts-btn">
+            <Link to="/admin/contacts" className="action-btn contacts-btn">
               Check Support Messages
-            </a>
-            <a href="/admin/bookings" className="action-btn bookings-btn">
+            </Link>
+            <Link to="/admin/bookings" className="action-btn bookings-btn">
               Manage Bookings
-            </a>
-            <a href="/admin/reviews" className="action-btn reviews-btn">
+            </Link>
+            <Link to="/admin/reviews" className="action-btn reviews-btn">
               Approve Reviews
-            </a>
-            <a href="/admin/menu" className="action-btn menu-btn">
+            </Link>
+            <Link to="/admin/menu" className="action-btn menu-btn">
               Edit Menu
-            </a>
+            </Link>
           </div>
         </div>
       </div>

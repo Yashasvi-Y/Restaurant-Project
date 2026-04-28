@@ -18,7 +18,7 @@
 }
 
 .coming-inner h1 {
-  font-family: var(--font-heading);
+  font-family: var(--font-base);
   font-size: 4rem;
   color: var(--accent-color);
   margin-bottom: 1rem;

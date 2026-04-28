@@ -1,12 +1,12 @@
 /* RegisterPage Styles */
 .register-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, rgba(67, 98, 112, 0.85) 0%, rgba(67, 98, 112, 0.95) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--font-base);
 }
 
 .register-container {
@@ -91,8 +91,8 @@
 
 .form-group input:focus {
   outline: none;
-  border-color: #667eea;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  border-color: #436270;
+  box-shadow: 0 0 0 3px rgba(67, 98, 112, 0.1);
 }
 
 .timer {
@@ -113,7 +113,7 @@
 .timer-expired button {
   background: none;
   border: none;
-  color: #667eea;
+  color: #436270;
   text-decoration: underline;
   cursor: pointer;
   font-weight: 600;
@@ -133,13 +133,13 @@
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #436270 0%, #354551 100%);
   color: white;
 }
 
 .btn-primary:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 5px 20px rgba(67, 98, 112, 0.4);
 }
 
 .btn-primary:disabled {
@@ -164,7 +164,7 @@
 }
 
 .form-footer a {
-  color: #667eea;
+  color: #436270;
   text-decoration: none;
   font-weight: 600;
 }

@@ -3,15 +3,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  background: linear-gradient(135deg, rgba(67, 98, 112, 0.85) 0%, rgba(67, 98, 112, 0.95) 100%);
   padding: 20px;
+  font-family: var(--font-base);
 }
 
 .login-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  max-width: 1000px;
+  max-width: 900px;
   width: 100%;
   align-items: center;
 }
@@ -26,12 +27,13 @@
 .login-box h1 {
   color: #464646;
   margin-bottom: 10px;
-  font-size: 2rem;
+  font-size: 28px;
 }
 
 .login-box .subtitle {
   color: #999;
   margin-bottom: 30px;
+  font-size: 14px;
 }
 
 .form-group {
@@ -43,7 +45,7 @@
   color: #464646;
   font-weight: 600;
   margin-bottom: 8px;
-  font-size: 0.95rem;
+  font-size: 14px;
 }
 
 .form-group input {
@@ -51,7 +53,7 @@
   padding: 12px;
   border: 1px solid #ddd;
   border-radius: 6px;
-  font-size: 1rem;
+  font-size: 14px;
   transition: border-color 0.3s ease;
 }
 
@@ -64,11 +66,11 @@
 .btn-primary {
   width: 100%;
   padding: 12px;
-  background-color: #6366f1;
+  background-color: #436270;
   color: white;
   border: none;
   border-radius: 6px;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -76,7 +78,7 @@
 }
 
 .btn-primary:hover:not(:disabled) {
-  background-color: #4f46e5;
+  background-color: #354551;
 }
 
 .btn-primary:disabled {
@@ -88,10 +90,11 @@
   text-align: center;
   color: #666;
   margin-top: 20px;
+  font-size: 14px;
 }
 
 .form-footer a {
-  color: #6366f1;
+  color: #436270;
   text-decoration: none;
   font-weight: 600;
 }
@@ -104,7 +107,7 @@
   padding: 12px;
   border-radius: 6px;
   margin-bottom: 20px;
-  font-size: 0.95rem;
+  font-size: 14px;
 }
 
 .alert-error {
@@ -118,7 +121,7 @@
 }
 
 .login-info h2 {
-  font-size: 1.8rem;
+  font-size: 24px;
   margin-bottom: 20px;
 }
 
@@ -128,7 +131,7 @@
 }
 
 .login-info li {
-  font-size: 1.1rem;
+  font-size: 18px;
   margin-bottom: 15px;
   padding-left: 0;
 }
